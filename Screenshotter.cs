@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-
 public enum DesiredSaveLocation
 {
     Persistent, StreamingAssets
@@ -23,15 +22,11 @@ public class Screenshotter : MonoBehaviour
 
     public DesiredSaveLocation imageSaveLocation;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public KeyCode buttonToPress;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Period))
+        if (Input.GetKeyDown(buttonToPress))
         {
 
 
